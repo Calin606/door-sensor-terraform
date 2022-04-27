@@ -9,4 +9,10 @@ terraform {
     aws = "= 3.63.0"
   }
 
+  backend "s3" {
+    bucket = "door-sensor-terraform"
+    key    = "tfstate"
+    region = "us-east-1"
+  }
+
 }
